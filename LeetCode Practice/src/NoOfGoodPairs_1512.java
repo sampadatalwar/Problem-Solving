@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class NoOfGoodPairs_1512 {
 	
@@ -6,6 +7,8 @@ public class NoOfGoodPairs_1512 {
 		int[] nums = {1,2,3,1,1,3};
 		
 		System.out.println("Number of good pairs are "+ numIdenticalPairs(nums));
+		
+		System.out.println("Number of good pairs are "+ goodPairs(nums));	//Optimized
 		
 	}
 	
@@ -24,5 +27,29 @@ public class NoOfGoodPairs_1512 {
         }
       return count;  
     }
+	
+	public static int goodPairs(int[] nums) {		//Optimized
+		Map<Integer, Integer> map = new HashMap<>();
+		
+		for(int i : nums) {
+			if(!map.containsKey(i)) {
+				map.put(i, 1);
+			}
+			
+			else {
+				int c= map.get(i);
+				map.put(i, ++c);
+			}
+		}
+		
+		int count = 0;
+		
+		for(int i:map.keySet()) {
+			count+= (map.get(i)*(map.get(i)-1))/2;
+		}
+		
+		return count;
+		
+	}
 
 }

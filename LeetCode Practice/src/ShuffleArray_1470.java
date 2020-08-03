@@ -14,7 +14,7 @@ public class ShuffleArray_1470 {
 		}
 		System.out.println(arr[arr.length-1]+"]");
 	}
-	
+	// Return and try to reduce the amount of memory consumed.
 	public static int[] shuffle(int[] nums, int n) {
     
 		int[] num = new int[nums.length];

@@ -11,8 +11,7 @@ public:
         }
         
         for(int i=0; i<s.size(); i++){
-            int x = int(s[i]) - int('a');
-            alphabets1[x]++;
+            alphabets1[int(s[i]) - int('a')]++;
         }
         
         for(int i=0; i<t.size(); i++){

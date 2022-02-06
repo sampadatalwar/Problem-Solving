@@ -7,7 +7,6 @@ public:
         
         for(int i=0; i<s.size(); i++){
             
-            cout<<"Input "<<s[i]<< endl;
             if(s[i] == '(' || s[i] == '{' || s[i] == '['){
                 
                 brackets.push_front(s[i]);
@@ -24,7 +23,6 @@ public:
                     c = brackets.front();
                     brackets.pop_front();
                     
-                    cout<<c<<" )"<<endl;
                     
                     if(c == '[' || c == '{')
                         return false;
@@ -38,7 +36,6 @@ public:
                     c = brackets.front();
                     brackets.pop_front();
                     
-                    cout<<c<<" }"<<endl;
                     
                     if(c == '[' || c == '(')
                         return false;
@@ -51,7 +48,6 @@ public:
                     c = brackets.front();
                     brackets.pop_front();
                     
-                    cout<<c<<" ]"<<endl;
                     
                     if(c == '(' || c == '{')
                         return false;

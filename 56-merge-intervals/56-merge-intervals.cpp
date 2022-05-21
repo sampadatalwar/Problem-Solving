@@ -17,8 +17,6 @@ public:
         vector<int> current = intervals[0];
         
         for(int i=1; i<intervals.size(); i++){
-            
-            vector<int> temp;
              
             
             if(intervals[i][0] <= current[1]){
